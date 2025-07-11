@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <form id="todoForm">
+                    <input type="text" name="todo" id="todo" placeholder="Add a todo..." required>
+                    <input type="date" name="date" id="date" required>
+                    <button type="submit" id="addButton">+</button>
+                </form>
+            </section>
+            
+            <section class="filter-section">
+                <select id="filterSelect">
+                    <option value="none">Filter</option>
+                    <option value="all">Show All</option>
+                    <option value="complete">Show Complete</option>
+                </select>
+                <button id="deleteButton" type="button">DELETE ALL</button>
+            </section>
+
+            <section class="task-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <tr>
+                            <td colspan="4">No Task</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

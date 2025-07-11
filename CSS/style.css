@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f50561c5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fc86b3c5;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+#todo {
+    flex: 2;
+}
+
+#date {
+    flex: 1.5;
+}
+
+#addButton {
+    background-color: #05fa63c5;
+    color: white;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.filter-section select,
+.filter-section button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+#deleteButton {
+    background-color: #ef4444;
+    color: white;
+    cursor: pointer;
+    font-size: small;
+}
+
+.task-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.task-section th,
+.task-section td {
+    border-bottom: 1px solid #334155;
+    padding: 5px;
+    text-align: center;
+}
+
+.task-section td button {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background-color: #22c55e;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.edit-btn{
+    background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+    color: #1b488f;  
+    transform: scale(1.2);
+}
+
+.complete-btn:hover {
+    color: #117937;  
+    transform: scale(1.2);
+}
+
+.delete-btn:hover {
+    color: #aa0f0f;
+    transform: scale(1.2);
+}
