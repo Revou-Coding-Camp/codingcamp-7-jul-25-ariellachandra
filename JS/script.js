@@ -65,9 +65,9 @@ function renderTodos() {
         row.innerHTML = `
             <td>${todo.task}</td>
             <td>${todo.date}</td>
-            <td>${todo.completed ? "Completed" : "Pending"}</td>
+            <td>${todo.completed ? "Completed" : "Uncompleted"}</td>
             <td>
-                <button class="edit-btn" onclick="startEdit(${index})">✏️</button>
+                <button class="edit-btn" onclick="editTask(${index})">✏️</button>
                 <button class="complete-btn" onclick="toggleComplete(${index})">✅</button>
                 <button class="delete-btn" onclick="deleteTask(${index})">🗑️</button>
             </td>
@@ -76,7 +76,7 @@ function renderTodos() {
     });
 }
 
-function startEdit(index) {
+function editTask(index) {
     todoInput.value = todos[index].task;
     dateInput.value = todos[index].date;
     editIndex = index;

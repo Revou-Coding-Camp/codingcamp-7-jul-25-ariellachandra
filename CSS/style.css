@@ -12,13 +12,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     background-color: #fc86b3c5;
     padding: 2rem;
     border-radius: 10px;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -99,6 +101,17 @@ form button {
     cursor: pointer;
 }
 
+.footer {
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+
 .complete-btn {
     background-color: #22c55e;
     color: white;
@@ -126,4 +139,63 @@ form button {
 .delete-btn:hover {
     color: #aa0f0f;
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-section select,
+    .filter-section button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-section table {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .task-section table {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .task-section th,
+    .task-section td {
+        font-size: 0.8rem;
+        padding: 4px;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+    }
 }
